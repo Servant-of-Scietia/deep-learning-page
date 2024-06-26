@@ -1,0 +1,8 @@
+div.pagecontainer{
+    background-image: url("/assets/Background_Landing.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    padding-bottom: 40vw;
+    display: flex;
+    flex-direction: column;
+}

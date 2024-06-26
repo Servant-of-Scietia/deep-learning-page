@@ -1,0 +1,104 @@
+*{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+body{
+    background-color: #030330;
+    margin: 0vw;
+    display: grid;
+}
+p{
+    font-size: 2vw;
+    font-family: 'Times New Roman', 'Times', 'serif';
+    color: #fff;
+}
+p.header{
+    padding-top: 2vw;
+    font-size: 6vw;
+    margin: 0vw;
+    color: #ffffff;
+    text-decoration: underline;
+    text-shadow: 1vw 1vw 1vw white;
+}
+p.text{
+    font-size: 1.2vw;
+    text-align: justify;
+}
+div.button{
+    
+    background-color: #101010;
+    border-radius: 4vw;
+    padding-bottom: 5vw;
+    padding-top: 5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 13vw;
+    height: 13vw;
+    box-shadow: 1vw 2vw 1vw black;
+    
+}
+div.button:hover{
+    background-color: #070707;
+}
+
+[speech-bubble] {
+    clip-path: (0 0, 100%-5vw 10vw, 100% 0);
+    padding: .8vw;
+    border: .125vw solid;
+    border-radius: 1vw;
+    margin-bottom: 6vw;
+    text-align: justify;
+    font-size: 1.2vw;
+    position: absolute;
+}
+
+[speech-bubble-lbottom] {
+    height: 1vw;
+    width: 1vw;
+    clip-path: polygon(50% 0vw, 100% 0, 0 100%);
+    background-color: white;
+    position: absolute;
+}
+[speech-bubble][white]
+{
+    border-color: white;
+    color: white
+}
+[speech-bubble][white]::before
+{
+    border-color: white;
+    background-color: white
+}
+[speech-bubble][white][hover]:hover{
+    background-color: white!important;
+    color: black!important;
+}
+
+[vertical-line]{
+    width: 0vw;
+    border-left: .125vw solid white;
+    position: absolute;
+}
+
+[horizontal-line]{
+    height: 0vw;
+    border-top: .125vw solid white;
+    position: absolute;
+}
+[container]{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+@keyframes blackbox {
+    from {height: 100%; top: 0%; background-color: black;}
+    to {height: 0%; top: 100%; background-color: black;}
+}
+[blackbox]{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    animation: blackbox 2s;
+}

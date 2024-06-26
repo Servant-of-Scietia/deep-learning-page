@@ -1,0 +1,173 @@
+<div class="pagecontainer">
+
+    <div *ngIf="page_router==0">
+        <div horizontal-line style="left: 0vw; top: 26.5vw; width: 3vw;"></div>
+
+        <div placeholder style="left: 3vw; top: 25vw" routerLink="/deep-learning">
+            <p speech-bubble white hover style="bottom: -1vw;">Deep
+                Learning Menu</p>
+            <div speech-bubble-lbottom style="left: 2vw; bottom: 4vw;"></div>
+        </div>
+
+        <div horizontal-line style="left: 6.125vw; top: 26.5vw; width: 7vw;"></div>
+
+        <div placeholder style="left: 13vw; top: 25vw">
+            <p speech-bubble white style="bottom: -1vw; width: 25vw;">Suppose that you have a
+                database containing information about houses across Europe.
+                One column in this database represents the colors of these houses. How would you determine the number of
+                blue houses in Germany?</p>
+            <div speech-bubble-lbottom style="left: 2vw; bottom: 4vw;"></div>
+        </div>
+
+        <div horizontal-line style="left: 16.125vw; top: 26.5vw; width: 30vw;"></div>
+        <div vertical-line style="left: 46vw; top: 11.5vw; height: 30vw;"></div>
+
+        <div horizontal-line style="left: 46.125vw; top: 11.5vw; width: 3.875vw;"></div>
+
+        <div placeholder id="p1a1" style="left: 50vw; top: 10vw" (click)="answer(1)">
+            <p speech-bubble white hover id="p1a1p" style="bottom: -1vw; width: 11vw;">count them manually</p>
+            <div speech-bubble-lbottom style="left: 2vw; bottom: 4vw;"></div>
+        </div>
+
+        <div horizontal-line style="left: 53.125vw; top: 11.5vw; width: 16.875vw;"></div>
+        <div horizontal-line style="left: 46.125vw; top: 21.5vw; width: 3.875vw;"></div>
+
+        <div placeholder id="p1a2" style="left: 50vw; top: 20vw" (click)="answer(2)">
+            <p speech-bubble white hover id="p1a2p" style="bottom: -1vw; width: 16vw;">use formal mathematical rules
+                in<br>
+                combination with a computer</p>
+            <div speech-bubble-lbottom style="left: 2vw; bottom: 4vw;"></div>
+        </div>
+
+        <div horizontal-line style="left: 53.125vw; top: 21.5vw; width: 16.875vw;"></div>
+        <div horizontal-line style="left: 46.125vw; top: 31.5vw; width: 3.875vw;"></div>
+
+        <div placeholder id="p1a3" style="left: 50vw; top: 30vw" (click)="answer(3)">
+            <p speech-bubble white hover id="p1a3p" style="bottom: -1vw; width: 14.5vw;">guess based on your intuition
+            </p>
+            <div speech-bubble-lbottom style="left: 2vw; bottom: 4vw;"></div>
+        </div>
+
+        <div horizontal-line style="left: 53.125vw; top: 31.5vw; width: 16.875vw;"></div>
+        <div horizontal-line style="left: 46.125vw; top: 41.5vw; width: 3.875vw;"></div>
+
+        <div placeholder id="p1a4" style="left: 50vw; top: 40vw" (click)="answer(4)">
+            <p speech-bubble white hover id="p1a4p" style="bottom: -1vw; width: 15.5vw;">use a random number generator
+            </p>
+            <div speech-bubble-lbottom style="left: 2vw; bottom: 4vw;"></div>
+        </div>
+
+        <div horizontal-line style="left: 53.125vw; top: 41.5vw; width: 16.875vw;"></div>
+
+        <div vertical-line style="left: 70vw; top: 11.5vw; height: 30vw;"></div>
+        <div horizontal-line style="left: 70vw; top: 26.5vw; width: 5vw;"></div>
+
+        <div placeholder id="p1d1" style="left: 75vw; top: 25vw">
+            <p speech-bubble white id="p1d1p" style="bottom: -1vw; width: 9vw;">{{answer_text}}</p>
+            <div speech-bubble-lbottom id="p1d1div" style="left: 2vw; bottom: 4vw;"></div>
+        </div>
+
+        <div horizontal-line style="left: 78.125vw; top: 26.5vw; width: 15vw;"></div>
+
+        <div placeholder id="p1f" style="left: 93vw; top: 25vw" (click)="next()">
+            <p *ngIf="unlocked_until_page>0" speech-bubble white hover style="bottom: -1vw;">next</p>
+            <div *ngIf="unlocked_until_page>0" speech-bubble-lbottom style="left: 2vw; bottom: 4vw;"></div>
+        </div>
+
+        <div horizontal-line style="left: 96.125vw; top: 26.5vw; width: 4vw;"></div>
+    </div>
+
+    <div *ngIf="page_router==1">
+        <div horizontal-line style="left: 0vw; top: 26.5vw; width: 3vw;"></div>
+
+        <div placeholder style="left: 3vw; top: 25vw" (click)="prev()">
+            <p speech-bubble white hover style="bottom: -1vw;">previous</p>
+            <div speech-bubble-lbottom style="left: 2vw; bottom: 4vw;"></div>
+        </div>
+
+        <div horizontal-line style="left: 6.125vw; top: 26.5vw; width: 7vw;"></div>
+
+        <div placeholder style="left: 13vw; top: 25vw">
+            <p speech-bubble white style="bottom: -1vw; width: 25vw;">Such instances are referred to as rule-based
+                systems. This
+                implies that you can directly encode
+                your
+                knowledge about the world into the computer. However, this isn’t always feasible. Consider a scenario
+                where
+                you want to predict the price of a house in your database, based on attributes such as size, number of
+                rooms, and location. How would you proceed?</p>
+            <div speech-bubble-lbottom style="left: 2vw; bottom: 4vw;"></div>
+        </div>
+
+
+
+        <p class="speech-bubble text">Predict it manually.</p>
+        <p class="speech-bubble text">Formulate the problem using a set of formal mathematical rules and let a computer
+            solve it.</p>
+        <p class="speech-bubble text">This is really hard with the given information.</p>
+        <p class="speech-bubble text">Allow your computer to make predictions based on a single attribute, such as
+            size.</p><!--this approach may oversimplify the problem and lead to inaccurate predictions.*-->
+    </div>
+    <div *ngIf="page_router==2">
+        <p class="speech-bubble text">You’re correct. While it’s theoretically possible to encode your knowledge about
+            the problem,
+            it’s highly
+            likely that this attempt may not be successful. The key is to have a set of examples in your database
+            where
+            the price is explicitly stated. By analyzing the attributes of these examples, you can discern which
+            attribute has a substantial impact on the price and understand their interdependencies. This specialized
+            area of computer science and artificial intelligence is referred to as machine learning. Formally we
+            observe
+            properties of so called features(that's just a fancy name for our attributes) in the given data, with
+            the
+            goal of making precise new predictions from this information. Now, consider a problem where you’re given
+            photos, and you need to determine if these photos depict houses. How would you approach this?</p>
+        <p class="speech-bubble text">We need a more sophisticated method.</p>
+        <p class="speech-bubble text">Formulate the problem using a set of formal mathematical rules and let a computer
+            solve it.</p>
+        <p class="speech-bubble text">Use a classical machine learning algorithm to solve this problem.</p>
+        <p class="speech-bubble text">Try out different ways to represent the image without altering the given
+            information and then solve
+            the
+            problem for this representation.</p>
+    </div>
+
+    <div *ngIf="page_router==3">
+        <p class="speech-bubble text">Indeed, you’re correct. If an image has a resolution of 256 * 256 pixels, our
+            problem will have
+            65,536
+            features, as each pixel represents a feature. Moreover, altering the value of one pixel doesn’t
+            significantly change the content of the image. This complexity makes it challenging for classical
+            machine
+            learning or for someone attempting to hardcode their knowledge. This is where a subfield of machine
+            learning, known as deep learning, comes into play. Initially, it identifies simple features, then
+            progressively discerns more abstract ones from these. So, what is deep learning likely to observe first?
+        </p>
+        <p class="speech-bubble text">basic geometric patterns such as edges or lines</p>
+        <p class="speech-bubble text">specific attributes of objects, such as the doors of a house</p>
+        <p class="speech-bubble text">the differentiation between objects, like distinguishing a car from a house</p>
+        <p class="speech-bubble text">more complex shapes like squares or s</p>
+    </div>
+    <div *ngIf="page_router==4">
+        <p class="speech-bubble text">Indeed, a deep learning model initially identifies simpler features such as edges
+            or lines. As
+            the
+            learning
+            progresses, what could the model potentially detect next?</p>
+        <p class="speech-bubble text">more complex shapes like squares or s</p>
+        <p class="speech-bubble text">specific attributes of objects, such as the doors of a house</p>
+        <p class="speech-bubble text">the differentiation between objects, like distinguishing a car from a house</p>
+        <p class="speech-bubble text">the appearance of a house during nighttime conditions</p>
+    </div>
+    <div *ngIf="page_router==5">
+        <p class="speech-bubble text">Absolutely. The model is likely to understand the definitions of shapes like
+            squares or s
+            in terms
+            of
+            their lines or edges. So, what could be the next learning step for the model?</p>
+        <p class="speech-bubble text">learn specific attributes of objects, such as the doors of a house</p>
+        <p class="speech-bubble text">develop the ability to recognize a house</p>
+        <p class="speech-bubble text">differentiate between objects, like distinguishing a car from a house</p>
+        <p class="speech-bubble text">comprehend the appearance of a house under nighttime conditions</p>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+div.pagecontainer {
+    display: flex;
+    flex-direction: column;
+    background-image: url("/assets/Background_Deep_Learning_Introduction.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+[placeholder] {
+    content: '';
+    border: white solid .125vw;
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+    left: 0vw;
+    position: absolute;
+}
